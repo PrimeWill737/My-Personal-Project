@@ -1,0 +1,43 @@
+/* Section */
+.services {
+  text-align: center;
+  background-color: white;
+}
+
+.services h2 {
+  padding-top: 4rem;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.services p {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+  color: black;
+}
+
+/* Carousel Container */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  background: #f5f5f5;
+  padding: 20px 0;
+
+  /* Pause animation on hover (optional) */
+  &:hover .cards {
+  animation-play-state: paused;
+}
+
+}
+
+@keyframes scrollRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+

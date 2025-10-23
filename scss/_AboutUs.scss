@@ -1,0 +1,94 @@
+/* About */
+.about {
+  background: #f3f3f3;
+  padding: 70px 10%;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #000;
+
+/* fade in effect for h2*/
+opacity: 0;
+animation: fadeInUp 1s ease-in-out forwards;
+}
+
+
+.about-text p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #000;
+
+  /* Fade-in effect for p */
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out forwards;
+  animation-delay: 0.3s; /* Starts after h2 */
+}
+
+
+.learn-btn {
+  background: #e31837;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+
+  display: inline-block;
+  
+  /* Fade-in effect for button */
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-in-out forwards;
+  animation-delay: 0.6s; /* Starts after p */
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.about-image img {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  /* Fade-in effect for image */
+  opacity: 0;
+  animation: fadeInRight 1.5s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

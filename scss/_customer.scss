@@ -1,0 +1,62 @@
+/* Cards Track */
+.cards {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: scrollRight 29s linear infinite;
+  
+}
+
+/* Card */
+.card {
+  background: rgb(165, 165, 242);
+  border-radius: 12px;
+  box-shadow: rgb(124, 170, 189);
+  width: 300px;
+  padding: 30px 20px;
+  flex-shrink: 0;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    animation: slide 15s infinite linear;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  @keyframes scrollRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+}

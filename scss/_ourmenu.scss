@@ -1,0 +1,232 @@
+.menu {
+  padding: 50px 0%;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  color: #e31837;
+  margin-bottom: 10px;
+}
+
+.menu p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Tabs */
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.menu-tabs button {
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.menu-tabs button.active,
+.menu-tabs button:hover {
+  background: #e31837;
+  color: #fff;
+}
+
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* Menu Card */
+.menu-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+//when clicked//
+.menu-card:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+// Persistent active state class
+.menu-card.active {
+  border-color: #e31837;
+  box-shadow: 0 6px 20px rgba(227, 24, 55, 0.25);
+  background: linear-gradient(to bottom, #fff 0%, #fff9fa 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e31837;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &::after {
+    content: "✓";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 28px;
+    height: 28px;
+    background: #e31837;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(227, 24, 55, 0.3);
+  }
+}
+
+.menu-card img {
+  width: 70%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+
+  transition: tranform 0.3s ease;
+}
+
+.menu-card.active img {
+  transform: scale(1.05);
+}
+
+
+.menu-card h3 {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 5px;
+
+  transition: color 0.3s ease;
+}
+
+//
+.menu-card.active h3 {
+  color: #e31837;
+  font-weight: 600;
+}// 
+
+.menu-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.menu-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btns a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.order {
+  background: #e31837;
+  color: #fff;
+}
+
+.order:hover {
+  background: #b51228;
+}
+
+//
+.order:active {
+  transform: scale(0.95);
+}
+//
+
+.cart {
+  border: 1px solid #e31837;
+  color: #e31837;
+  background: transparent;
+}
+
+.cart:hover {
+  background: #e31837;
+  color: #fff;
+}
+
+//
+.cart:active {
+  transform: scale(0.95);
+}
+//
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu h2 {
+    font-size: 1.6rem;
+  }
+
+  .menu-tabs {
+    gap: 10px;
+  }
+
+  .btns {
+    flex-direction: column;
+  }
+
+  .menu-card.active::after {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    top: 12px;
+    right: 12px;
+  }
+}
